@@ -6,6 +6,8 @@ import { removeUser } from "../utils/userSlice";
 
 const NavBar = () => {
   const user = useSelector((store) => store.user);
+  
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -35,7 +37,7 @@ const NavBar = () => {
          >
           <div className="w-10 rounded-full">
             <img alt="user photo" src={user.photoUrl} />
-        </div>
+           </div>
       </div>  
       <ul
         tabIndex="-1"
