@@ -27,13 +27,12 @@ const Connections = () => {
 
 if (!connections) return;
 
-  if (connections.length === 0) return <h1> No Connections Found</h1>;
+  if (connections.length === 0) return <h1> No Connections Found!!!</h1>;
 
   return (
     <div className="text-center my-5">
       <h1 className="text-bold text-3xl">Connections</h1>
 
-      
        {connections
                 ?.filter(Boolean)
                 .map((connection) => {
