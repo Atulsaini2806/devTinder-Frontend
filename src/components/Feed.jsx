@@ -27,11 +27,9 @@ const getFeed = async () => {
         getFeed();
     }, []);
 
+    if(!feed) return;
+    if(feed.length <= 0) return <h1 className="font-bold text-lg text-center my-10">No More Users Found!!</h1>;
 
-        if(!feed) return;
-    if(feed.length<=0){
-        return <h1 className="font-bold text-lg text-center my-10">No More Users Found!!</h1>
-    }
 
      return (
         feed &&
@@ -40,7 +38,5 @@ const getFeed = async () => {
         </div>
     );
 };
-
-
 
 export default Feed;
