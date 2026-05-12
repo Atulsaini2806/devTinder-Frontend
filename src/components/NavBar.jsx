@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link , useNavigate} from "react-router-dom";
 import { BASE_URL } from "../utils/constants";
 import { removeUser } from "../utils/userSlice";
+import ToggleTheme from "./ToggleTheme";
 
 const NavBar = () => {
   const user = useSelector((store) => store.user);
@@ -28,7 +29,8 @@ const NavBar = () => {
   </div>
   {user && (
   <div className="flex gap-2">
-    <div className="from-control">Welcome, {user.firstName} </div>
+    <ToggleTheme />
+    <div className="from-control my-2">Welcome, {user.firstName} </div>
       <div className="dropdown dropdown-end mx-5 flex ">
         <div 
         tabIndex={0}
